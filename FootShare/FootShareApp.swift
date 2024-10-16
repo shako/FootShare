@@ -11,7 +11,7 @@ import SwiftUI
 struct FootShareApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MinimumGameView()
         }
     }
 }
