@@ -11,6 +11,7 @@ struct MininumSettingsView: View {
     
     @State private var team1Name: String = "KVC Westerlo"
     @State private var team2Name: String = ""
+    @State private var showWhishkitSheet: Bool = false
     
     var body: some View {
         
@@ -47,6 +48,14 @@ struct MininumSettingsView: View {
                     }
                 }
                 
+                Button {
+                    showWhishkitSheet.toggle()
+                } label: {
+                    Text("Request New Features!")
+                        .settingsButtonStylePurple()
+                }.sheet(isPresented: $showWhishkitSheet, content: {
+                    WhiskitView()
+                })
 
             }
             .frame(maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .top)
@@ -96,6 +105,10 @@ extension View {
     
     func settingsButtonStyleOrange() -> some View {
         modifier(SettingsButton(backGroundColor: Color.init(hex: "F27C50")))
+    }
+    
+    func settingsButtonStylePurple() -> some View {
+        modifier(SettingsButton(backGroundColor: Color("ChangesToPublishColor")))
     }
 }
 
