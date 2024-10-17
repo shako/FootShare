@@ -59,11 +59,8 @@ struct TopBar: View {
                 MininumSettingsView()
             })
             Spacer()
-            Button {
-                
-            } label: {
-                GameButton(icon: "paperplane.fill", color: Color.init("ChangesToPublishColor"))
-            }
+            ShareScoreButtonView(scoreText: .constant("Westerlo [10-0] KRC Genk"))
+
         }
         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .top)
     }

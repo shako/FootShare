@@ -27,6 +27,7 @@
 		B01317282CBFCB12003FBFA7 /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0DCD31E2CBFBD260057FAAF /* Poppins-ThinItalic.ttf */; };
 		B013172B2CBFDF60003FBFA7 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B013172A2CBFDF60003FBFA7 /* Test.storyboard */; };
 		B024626E2CBEE0B500BFC375 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B024626D2CBEE0B500BFC375 /* LoginView.swift */; };
+		B05F97962CC1482800E31702 /* ShareScoreButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05F97952CC1482800E31702 /* ShareScoreButtonView.swift */; };
 		B0B20AE12CBEB6B200041113 /* FootShareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B20AE02CBEB6B200041113 /* FootShareApp.swift */; };
 		B0B20AE32CBEB6B200041113 /* MinimumGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B20AE22CBEB6B200041113 /* MinimumGameView.swift */; };
 		B0B20AE52CBEB6B300041113 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0B20AE42CBEB6B300041113 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		B013172A2CBFDF60003FBFA7 /* Test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
 		B024626D2CBEE0B500BFC375 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B05F97952CC1482800E31702 /* ShareScoreButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareScoreButtonView.swift; sourceTree = "<group>"; };
 		B0B20ADD2CBEB6B200041113 /* FootShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0B20AE02CBEB6B200041113 /* FootShareApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootShareApp.swift; sourceTree = "<group>"; };
 		B0B20AE22CBEB6B200041113 /* MinimumGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimumGameView.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				B0DCD3132CBFBD130057FAAF /* Fonts */,
 				B0B20AF02CBED13A00041113 /* Components */,
 				B0B20AE22CBEB6B200041113 /* MinimumGameView.swift */,
+				B05F97952CC1482800E31702 /* ShareScoreButtonView.swift */,
 				B0B20AEE2CBECAC800041113 /* MininumSettingsView.swift */,
 				B0B20AF32CBED86A00041113 /* ScoreView.swift */,
 				B024626D2CBEE0B500BFC375 /* LoginView.swift */,
@@ -250,6 +253,7 @@
 				B0B20AEF2CBECAC800041113 /* MininumSettingsView.swift in Sources */,
 				B0DCD3122CBFB8DF0057FAAF /* Color.swift in Sources */,
 				B0B20AE32CBEB6B200041113 /* MinimumGameView.swift in Sources */,
+				B05F97962CC1482800E31702 /* ShareScoreButtonView.swift in Sources */,
 				B0B20AE12CBEB6B200041113 /* FootShareApp.swift in Sources */,
 				B0B20AF22CBED14C00041113 /* Buttons.swift in Sources */,
 				B0B20AF42CBED86A00041113 /* ScoreView.swift in Sources */,

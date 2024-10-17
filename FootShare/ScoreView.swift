@@ -30,7 +30,7 @@ struct ScoreView: View {
                     .frame(width: 150)
                     .padding(.horizontal, 8)
                     .padding(.trailing, 4)
-                    .padding(.vertical, -15)
+                    .padding(.vertical, 0)
                     .background(Color("EasyBlackColor"))
                     .clipShape(.rect(cornerRadii: RectangleCornerRadii(topLeading: 6, bottomLeading: 6, bottomTrailing: 6, topTrailing: 6)))
                     .lineLimit(1)
