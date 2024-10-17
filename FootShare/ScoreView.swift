@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ScoreView: View {
     @State private var buttonMaxHeight: CGFloat = 0
+    @State private var buttonMaxWidth: CGFloat = 0
     var teamName: String
     
     var body: some View {
@@ -40,16 +41,28 @@ struct ScoreView: View {
             }
             .background(GeometryReader { geometry in
                 Color.clear.preference(
-                    key: ButtonWidthPreferenceKey.self,
+                    key: ButtonHeightPreferenceKey.self,
                     value: geometry.size.height
                 )
             })
             .frame(height: buttonMaxHeight)
-            .onPreferenceChange(ButtonWidthPreferenceKey.self) {
+            .onPreferenceChange(ButtonHeightPreferenceKey.self) {
                 buttonMaxHeight = $0
             }
+            
+            
+            
         }
-        
+        .background(GeometryReader { geometry in
+            Color.clear.preference(
+                key: ButtonWidthPreferenceKey.self,
+                value: geometry.size.width
+            )
+        })
+        .frame(maxWidth: buttonMaxWidth)
+        .onPreferenceChange(ButtonWidthPreferenceKey.self) {
+            buttonMaxWidth = $0
+        }
         .padding(.vertical, 32)
         .frame(maxWidth: /*@START_MENU_TOKEN@*/ .infinity/*@END_MENU_TOKEN@*/)
         .background(Color("EasyWhiteColor"))
@@ -62,6 +75,16 @@ struct ScoreView: View {
 
 private extension ScoreView {
     struct ButtonWidthPreferenceKey: PreferenceKey {
+        static let defaultValue: CGFloat = 0
+
+        static func reduce(value: inout CGFloat,
+                           nextValue: () -> CGFloat)
+        {
+            value = max(value, nextValue())
+        }
+    }
+    
+    struct ButtonHeightPreferenceKey: PreferenceKey {
         static let defaultValue: CGFloat = 0
 
         static func reduce(value: inout CGFloat,
