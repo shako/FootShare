@@ -14,6 +14,7 @@ struct MinimumGameView: View {
         
         ZStack {
             
+            Color.init(hex: "F9F9F9").ignoresSafeArea()
             LinearGradient(gradient: Gradient(colors: [Color.init(hex: "#92FFC0"), Color.init(hex: "#002661")]), startPoint: .topLeading, endPoint: .bottomTrailing).opacity(0.5)
                 .ignoresSafeArea()
             
