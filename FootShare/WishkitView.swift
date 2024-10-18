@@ -8,7 +8,7 @@
 import SwiftUI
 import WishKit
 
-struct WhiskitView: View {
+struct WishkitView: View {
     
     
     init() {
@@ -22,5 +22,5 @@ struct WhiskitView: View {
 }
 
 #Preview {
-    WhiskitView()
+    WishkitView()
 }

@@ -29,7 +29,7 @@
 		B024626E2CBEE0B500BFC375 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B024626D2CBEE0B500BFC375 /* LoginView.swift */; };
 		B05F97962CC1482800E31702 /* ShareScoreButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05F97952CC1482800E31702 /* ShareScoreButtonView.swift */; };
 		B09BA9072CC15682005F2A4F /* WishKit in Frameworks */ = {isa = PBXBuildFile; productRef = B09BA9062CC15682005F2A4F /* WishKit */; };
-		B09BA9092CC1568F005F2A4F /* WhiskitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09BA9082CC1568F005F2A4F /* WhiskitView.swift */; };
+		B09BA9092CC1568F005F2A4F /* WishkitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09BA9082CC1568F005F2A4F /* WishkitView.swift */; };
 		B0B20AE12CBEB6B200041113 /* FootShareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B20AE02CBEB6B200041113 /* FootShareApp.swift */; };
 		B0B20AE32CBEB6B200041113 /* MinimumGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B20AE22CBEB6B200041113 /* MinimumGameView.swift */; };
 		B0B20AE52CBEB6B300041113 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0B20AE42CBEB6B300041113 /* Assets.xcassets */; };
@@ -44,7 +44,7 @@
 		B013172A2CBFDF60003FBFA7 /* Test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
 		B024626D2CBEE0B500BFC375 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B05F97952CC1482800E31702 /* ShareScoreButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareScoreButtonView.swift; sourceTree = "<group>"; };
-		B09BA9082CC1568F005F2A4F /* WhiskitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiskitView.swift; sourceTree = "<group>"; };
+		B09BA9082CC1568F005F2A4F /* WishkitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishkitView.swift; sourceTree = "<group>"; };
 		B0B20ADD2CBEB6B200041113 /* FootShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0B20AE02CBEB6B200041113 /* FootShareApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootShareApp.swift; sourceTree = "<group>"; };
 		B0B20AE22CBEB6B200041113 /* MinimumGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimumGameView.swift; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 				B0B20AE22CBEB6B200041113 /* MinimumGameView.swift */,
 				B05F97952CC1482800E31702 /* ShareScoreButtonView.swift */,
 				B0B20AEE2CBECAC800041113 /* MininumSettingsView.swift */,
-				B09BA9082CC1568F005F2A4F /* WhiskitView.swift */,
+				B09BA9082CC1568F005F2A4F /* WishkitView.swift */,
 				B0B20AF32CBED86A00041113 /* ScoreView.swift */,
 				B024626D2CBEE0B500BFC375 /* LoginView.swift */,
 				B0B20AE02CBEB6B200041113 /* FootShareApp.swift */,
@@ -263,7 +263,7 @@
 				B024626E2CBEE0B500BFC375 /* LoginView.swift in Sources */,
 				B0B20AEF2CBECAC800041113 /* MininumSettingsView.swift in Sources */,
 				B0DCD3122CBFB8DF0057FAAF /* Color.swift in Sources */,
-				B09BA9092CC1568F005F2A4F /* WhiskitView.swift in Sources */,
+				B09BA9092CC1568F005F2A4F /* WishkitView.swift in Sources */,
 				B0B20AE32CBEB6B200041113 /* MinimumGameView.swift in Sources */,
 				B05F97962CC1482800E31702 /* ShareScoreButtonView.swift in Sources */,
 				B0B20AE12CBEB6B200041113 /* FootShareApp.swift in Sources */,

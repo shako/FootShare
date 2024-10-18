@@ -9,9 +9,11 @@ import SwiftUI
 
 struct MininumSettingsView: View {
     
+    @Environment(\.presentationMode) var presentationMode
+    
     @State private var team1Name: String = "KVC Westerlo"
     @State private var team2Name: String = ""
-    @State private var showWhishkitSheet: Bool = false
+    @State private var showWishKit: Bool = false
     
     var body: some View {
         
@@ -23,48 +25,14 @@ struct MininumSettingsView: View {
                 
                 VStack (spacing: 24) {
                     Teams(team1Name: $team1Name, team2Name: $team2Name)
-
-                    Button {
-                        
-                    } label: {
-                        Text("To Game")
-                            .settingsButtonStyleGreen()
-                    }
+                    toGameButton
                     
                     VStack (spacing: 8){
-
-                        
-                        Button {
-                            
-                        } label: {
-                            Text("Reset Scores")
-                                .settingsButtonStyleOrange()
-                        }
-                        
-                        Button {
-                            
-                        } label: {
-                            Text("Reset Teams And Scores")
-                                .settingsButtonStyleOrange()
-                        }
+                        resetScoresButton
+                        resetScoresAndTeamsButton
                     }
                     
-                    Button {
-                        showWhishkitSheet.toggle()
-                    } label: {
-                        Text("Request New Features!")
-                            .settingsButtonStylePurple()
-                            .overlay(
-                                Image(systemName: "chevron.right")
-                                    .frame(maxWidth: .infinity, alignment: .trailing)
-                                    .foregroundStyle(Color("EasyWhiteColor"))
-                                    .font(.system(size: 20))
-                                    .padding(.trailing, 16)
-                            )
-                    }
-                    .navigationDestination(isPresented: $showWhishkitSheet, destination: {
-                        WhiskitView()
-                    })
+                    wishKitButton
 
                 }
                 .frame(maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .top)
@@ -74,7 +42,54 @@ struct MininumSettingsView: View {
             }
         }
         
-        
+    }
+    
+    var resetScoresButton : some View {
+        Button {
+            
+        } label: {
+            Text("Reset Scores")
+                .settingsButtonStyleOrange()
+        }
+    }
+
+    var resetScoresAndTeamsButton: some View {
+        Button {
+            
+        } label: {
+            Text("Reset Teams And Scores")
+                .settingsButtonStyleOrange()
+        }
+    }
+    
+
+    var toGameButton: some View {
+        Button {
+            presentationMode.wrappedValue.dismiss()
+        } label: {
+            Text("To Game")
+                .settingsButtonStyleGreen()
+        }
+    }
+    
+
+    var wishKitButton: some View {
+        Button {
+            showWishKit.toggle()
+        } label: {
+            Text("Request New Features!")
+                .settingsButtonStylePurple()
+                .overlay(
+                    Image(systemName: "chevron.right")
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .foregroundStyle(Color("EasyWhiteColor"))
+                        .font(.system(size: 20))
+                        .padding(.trailing, 16)
+                )
+        }
+        .navigationDestination(isPresented: $showWishKit, destination: {
+            WishkitView()
+        })
     }
 }
 
@@ -106,9 +121,7 @@ extension View {
     func inputFieldStyle() -> some View {
         modifier(InputField())
     }
-}
 
-extension View {
     func settingsButtonStyleGreen() -> some View {
         modifier(SettingsButton(backGroundColor: Color.init(hex: "2BA718")))
     }
