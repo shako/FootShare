@@ -24,13 +24,16 @@ struct MininumSettingsView: View {
                     .ignoresSafeArea()
                 
                 VStack (spacing: 24) {
-                    Teams(team1Name: $team1Name, team2Name: $team2Name)
-                    toGameButton
-                    
-                    VStack (spacing: 8){
+                    HStack (spacing: 8){
                         resetScoresButton
                         resetScoresAndTeamsButton
                     }
+                    
+                    Teams(team1Name: $team1Name, team2Name: $team2Name)
+                        .padding(.vertical, 24)
+                    
+                    toGameButton
+
                     
                     wishKitButton
 
@@ -48,7 +51,7 @@ struct MininumSettingsView: View {
         Button {
             
         } label: {
-            Text("Reset Scores")
+            Text("Reset Score")
                 .settingsButtonStyleOrange()
         }
     }
@@ -57,7 +60,7 @@ struct MininumSettingsView: View {
         Button {
             
         } label: {
-            Text("Reset Teams And Scores")
+            Text("Reset Game")
                 .settingsButtonStyleOrange()
         }
     }
@@ -67,7 +70,7 @@ struct MininumSettingsView: View {
         Button {
             presentationMode.wrappedValue.dismiss()
         } label: {
-            Text("To Game")
+            Text("Play!")
                 .settingsButtonStyleGreen()
         }
     }
@@ -77,7 +80,7 @@ struct MininumSettingsView: View {
         Button {
             showWishKit.toggle()
         } label: {
-            Text("Request New Features!")
+            Text("Request A Feature!")
                 .settingsButtonStylePurple()
                 .overlay(
                     Image(systemName: "chevron.right")
