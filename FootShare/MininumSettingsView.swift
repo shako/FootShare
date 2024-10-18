@@ -15,53 +15,63 @@ struct MininumSettingsView: View {
     
     var body: some View {
         
-        ZStack {
-            Color.init(hex: "F9F9F9").ignoresSafeArea()
-            LinearGradient(gradient: Gradient(colors: [Color.init(hex: "#92FFC0"), Color.init(hex: "#002661")]), startPoint: .topLeading, endPoint: .bottomTrailing).opacity(0.3)
-                .ignoresSafeArea()
-            
-            VStack (spacing: 24) {
-                Teams(team1Name: $team1Name, team2Name: $team2Name)
-
-                Button {
-                    
-                } label: {
-                    Text("To Game")
-                        .settingsButtonStyleGreen()
-                }
+        NavigationStack {
+            ZStack {
+                Color.init(hex: "F9F9F9").ignoresSafeArea()
+                LinearGradient(gradient: Gradient(colors: [Color.init(hex: "#92FFC0"), Color.init(hex: "#002661")]), startPoint: .topLeading, endPoint: .bottomTrailing).opacity(0.3)
+                    .ignoresSafeArea()
                 
-                VStack (spacing: 8){
+                VStack (spacing: 24) {
+                    Teams(team1Name: $team1Name, team2Name: $team2Name)
 
-                    
                     Button {
                         
                     } label: {
-                        Text("Reset Scores")
-                            .settingsButtonStyleOrange()
+                        Text("To Game")
+                            .settingsButtonStyleGreen()
+                    }
+                    
+                    VStack (spacing: 8){
+
+                        
+                        Button {
+                            
+                        } label: {
+                            Text("Reset Scores")
+                                .settingsButtonStyleOrange()
+                        }
+                        
+                        Button {
+                            
+                        } label: {
+                            Text("Reset Teams And Scores")
+                                .settingsButtonStyleOrange()
+                        }
                     }
                     
                     Button {
-                        
+                        showWhishkitSheet.toggle()
                     } label: {
-                        Text("Reset Teams And Scores")
-                            .settingsButtonStyleOrange()
+                        Text("Request New Features!")
+                            .settingsButtonStylePurple()
+                            .overlay(
+                                Image(systemName: "chevron.right")
+                                    .frame(maxWidth: .infinity, alignment: .trailing)
+                                    .foregroundStyle(Color("EasyWhiteColor"))
+                                    .font(.system(size: 20))
+                                    .padding(.trailing, 16)
+                            )
                     }
+                    .navigationDestination(isPresented: $showWhishkitSheet, destination: {
+                        WhiskitView()
+                    })
+
                 }
-                
-                Button {
-                    showWhishkitSheet.toggle()
-                } label: {
-                    Text("Request New Features!")
-                        .settingsButtonStylePurple()
-                }.sheet(isPresented: $showWhishkitSheet, content: {
-                    WhiskitView()
-                })
+                .frame(maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .top)
+                .padding(.horizontal)
+                .padding(.top, 36)
 
             }
-            .frame(maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .top)
-            .padding(.horizontal)
-            .padding(.top, 36)
-
         }
         
         
